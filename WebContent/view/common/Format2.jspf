@@ -1,0 +1,17 @@
+<%-- Hàm định dạng hiển thị dùng chung (chỉ định dạng, không tính toán nghiệp vụ) --%>
+<%!
+    private static String money(float v) {
+        java.text.DecimalFormat f = new java.text.DecimalFormat("#,##0", java.text.DecimalFormatSymbols.getInstance(java.util.Locale.forLanguageTag("vi-VN")));
+        return f.format(v);
+    }
+    private static String date(java.util.Date d) {
+        return d == null ? "" : new java.text.SimpleDateFormat("dd/MM/yyyy").format(d);
+    }
+    private static String dateTime(java.util.Date d) {
+        return d == null ? "" : new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(d);
+    }
+    private static String esc(String s) {
+        if (s == null) return "";
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
+    }
+%>

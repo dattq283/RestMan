@@ -1,0 +1,19 @@
+<%-- Hiện hộp thông báo nếu biến msg khác null. Nút OK chỉ đóng hộp (form method="dialog", không cần JavaScript),
+     hoặc chuyển sang trang msgOkAction nếu khác null. --%>
+<% if (msg != null) { %>
+<div class="overlay"></div>
+<dialog class="msg" open>
+    <p><%= esc(msg) %></p>
+    <% if (msgOkAction != null) {
+           String[] okParts = msgOkAction.split("\\?", 2); %>
+    <form method="get" action="<%= okParts[0] %>">
+        <% if (okParts.length > 1) for (String kv : okParts[1].split("&")) { String[] p = kv.split("=", 2); %>
+        <input type="hidden" name="<%= esc(p[0]) %>" value="<%= p.length > 1 ? esc(p[1]) : "" %>">
+        <% } %>
+        <button type="submit" class="btn" autofocus>OK</button>
+    </form>
+    <% } else { %>
+    <form method="dialog"><button type="submit" class="btn" autofocus>OK</button></form>
+    <% } %>
+</dialog>
+<% } %>

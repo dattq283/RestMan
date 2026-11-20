@@ -1,0 +1,15 @@
+.DS_Store
+docs/
+tools/
+__pycache__/
+*.docx
+*.zip
+.claude/
+.idea/
+.vscode/
+*.iml
+build/
+out/
+target/
+bin/
+*.class

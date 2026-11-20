@@ -1,0 +1,9 @@
+<%-- Dòng người dùng + nút Đăng xuất (POST vì làm thay đổi trạng thái phiên). Cần biến userLabel. --%>
+<header class="top"><div class="wrap">
+    <span class="brand">RestMan</span><span class="tagline">Hệ thống quản lý nhà hàng</span>
+    <div class="user"><span><%= esc(userLabel) %></span>
+        <form class="inline" method="post" action="<%= request.getContextPath() %>/view/member/LoginView2.jsp">
+            <button type="submit" name="subLogout" class="btn outline">Đăng xuất</button>
+        </form>
+    </div>
+</div></header>

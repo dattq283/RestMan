@@ -1,0 +1,21 @@
+-- Ảnh thật từ Wikimedia Commons, đã kiểm tra từng ảnh đúng món. Nạp SAU restman2.sql.
+USE restman2;
+UPDATE tblMenuItem2 SET image = CONCAT('img/menu/', itemCode, '.svg');
+UPDATE tblMenuItem2 SET image = 'img/menu/MA001.jpg' WHERE itemCode = 'MA001';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA002.jpg' WHERE itemCode = 'MA002';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA004.jpg' WHERE itemCode = 'MA004';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA005.jpg' WHERE itemCode = 'MA005';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA006.jpg' WHERE itemCode = 'MA006';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA011.jpg' WHERE itemCode = 'MA011';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA012.jpg' WHERE itemCode = 'MA012';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA013.jpg' WHERE itemCode = 'MA013';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA014.jpg' WHERE itemCode = 'MA014';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA015.jpg' WHERE itemCode = 'MA015';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA100.jpg' WHERE itemCode = 'MA100';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA101.jpg' WHERE itemCode = 'MA101';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA102.jpg' WHERE itemCode = 'MA102';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA122.jpg' WHERE itemCode = 'MA122';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA123.jpg' WHERE itemCode = 'MA123';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA130.jpg' WHERE itemCode = 'MA130';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA131.jpg' WHERE itemCode = 'MA131';
+UPDATE tblMenuItem2 SET image = 'img/menu/MA136.jpg' WHERE itemCode = 'MA136';
